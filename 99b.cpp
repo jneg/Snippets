@@ -6,12 +6,18 @@
 #include <iostream>
 #include <string>
 
+std::string b(std::int16_t i)
+{
+   if(i==0) return "no more bottles";
+   else return std::to_string(i) + (i==1 ? " bottle" : " bottles");
+}
+
 int main()
 {
-   for(std::int16_t b=99; b!=0; --b)
+   for(std::int16_t i=99; i!=0; --i)
    {
-      std::cout << b << (b==1 ? " bottle" : " bottles") << " of beer on the wall, " << b << (b==1 ? " bottle" : " bottles") << " of beer." << std::endl;
-      std::cout << "Take one down and pass it around, " << (b-1==0 ? "no more" : std::to_string(b-1)) << (b-1==1 ? " bottle" : " bottles") << " of beer on the wall.\n" << std::endl;
+      std::cout << b(i) << " of beer on the wall, " << b(i) << " of beer." << std::endl;
+      std::cout << "Take one down and pass it around, " << b(i-1) << " of beer on the wall.\n" << std::endl;
    }
    std::cout << "No more bottles of beer on the wall, no more bottles of beer." << std::endl;
    std::cout << "Go to the store and buy some more, 99 bottles of beer on the wall.\n" << std::endl;
