@@ -1,11 +1,10 @@
 #include <cstdio>
 int main()
 {
-   for(int i=1;i<101;++i)
+   for (int i=1;i<101;printf("\n"),++i)
    {
-      if(i%15==0) printf("FizzBuzz\n");
-      else if(i%5==0) printf("Buzz\n");
-      else if(i%3==0) printf("Fizz\n");
-      else printf("%d\n",i);
+      if (!(i%3)) printf("Fizz");
+      if (!(i%5)) printf("Buzz");
+      if (i%3&&i%5) printf("%d",i);
    }
 }
