@@ -1,17 +1,11 @@
-/*
-   FizzBuzz program
-*/
-
-#include <cstdint>
-#include <iostream>
-
+#include <cstdio>
 int main()
 {
-    for(std::int16_t i=1; i<=100; ++i)
-    {
-        if(i%15 == 0) std::cout << "FizzBuzz" << std::endl;
-        else if(i%5 == 0) std::cout << "Buzz" << std::endl;
-        else if(i%3 == 0) std::cout << "Fizz" << std::endl;
-        else std::cout << i << std::endl;
-    }
+   for(int i=1;i<101;++i)
+   {
+      if(i%15==0) printf("FizzBuzz\n");
+      else if(i%5==0) printf("Buzz\n");
+      else if(i%3==0) printf("Fizz\n");
+      else printf("%d\n",i);
+   }
 }
