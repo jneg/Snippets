@@ -1,5 +1,8 @@
 /*
    99 Bottles of Beer on the Wall Program
+
+   g++ 99b.cpp -std=c++11 -Werror -O2 -o 99b
+   ./99b
 */
 
 #include <iostream>
